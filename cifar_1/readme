@@ -1,1 +1,21 @@
+A diffúziós modellek és alkalmazásaik szakdolgozatomban az első mérést a Google által szolgáltatott Colaboratory interaktív környezetben, 
+NVIDIA Tesla T4 GPU grafikus kártyával futattam.
 
+A mérésben a következő hiperparaméterek voltak beállítva:
+
+BATCH_SIZE = 256         # Az egyidejűleg feldolgozott képek száma a tanítás során.   
+IMAGE_SIZE = 32          # A képek mérete, 32x32 pixel.
+CHANNELS = 3             # RGB színcsatornák száma.
+
+BETA_INITIAL = 1e-4      # Az első beta paraméter értéke a DDPM modellben. 
+                           A beta paraméterek az exponenciális csökkenő diffúziót vezérlik a DDPM-ben.
+BETA_FINAL = 1e-2        # A második beta paraméter értéke a DDPM modellben.
+
+FEATURE_MAP_SIZE = 64    # A hálózat belső rétegeiben alkalmazott karakterisztikus térképek száma.   
+GROUPS_NUMBER = 32       # A GAU blokk csoportok száma. (GAU: Gated Activation Unit)
+HEADS_NUMBER = 1         # Az összekapcsolt fejek száma.
+BLOCKS_NUMBER = 2        # A GAU blokkok száma.
+
+LEARNING_RATE = 2e-5     # A tanulási ráta, amely meghatározza, hogy milyen mértékben módosítjuk a hálózat súlyait a tanulás során.
+EPOCHS = 20              # A teljes adathalmazon való átfutások száma a tanulás során.
+T = 2000                 # Az időpillanatok száma a DDPM diffúziós folyamatában.
