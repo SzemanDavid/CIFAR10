@@ -1,1 +1,21 @@
+A diffúziós modellek és alkalmazásaik szakdolgozatomban a CIFAR10 DDPM kód 2. mérése.
+A kód a Google által biztosított Colaboratoy interaktív környezetben futott le NVIDIA V100 nagyteljesítményű GPU-n.
+Hiperparamétereknek a következők voltak használva:
 
+BATCH_SIZE = 128       
+IMAGE_SIZE = 32  
+CHANNELS = 3     
+
+BETA_INITIAL = 1e-4
+BETA_FINAL = 1e-2
+
+FEATURE_MAP_SIZE = 64    
+GROUPS_NUMBER = 32
+HEADS_NUMBER = 1
+BLOCKS_NUMBER = 1    
+
+LEARNING_RATE = 2e-5     
+EPOCHS = 100
+T = 2000     
+
+A kód által generált képek a mappában megtalálhatóak, a mérési eredmények pedig a szakdolgozat megfelelő fejezetében van kifejtve.
